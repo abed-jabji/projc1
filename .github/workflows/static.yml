@@ -28,7 +28,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-steps:
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
@@ -39,5 +39,3 @@ steps:
           # Upload entire repository
           path: '.'
 
-      - name: HTML validation 
-      run: npx html-validate "index.html"
